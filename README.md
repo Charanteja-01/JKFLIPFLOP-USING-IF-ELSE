@@ -33,16 +33,74 @@ By using three variable K-Map, we can get the simplified expression for next sta
 The maximum possible groupings of adjacent ones are already shown in the figure. Therefore, the simplified expression for next state Qt+1t+1 is Q(t+1)=JQ(t)′+K′Q(t)Q(t+1)=JQ(t)′+K′Q(t)
 
 **Procedure**
+1.Go to quartus software.
 
-/* write all the steps invloved */
+2.Set new environment.
+
+3.Type the code to implement SR flipflop using verilog and validating their functionality using their functional tables.
+
+4.Run the program.
+
+5.Give inputs in the waveform table.
+
+6.Run the program.
 
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+```
+
+Program for flipflops and verify its truth table in quartus using Verilog programming.
+Developed by: NISHA.D
+RegisterNumber: 212223230143
+
+module JKFLIPFLOPUSINGIFELSE(q, qb,j,k,clock,reset);
+    input j,k,clock,reset;
+    output reg q, qb;
+	 
+always @ (posedge (clock))
+
+    begin 
+        if (!reset)
+            begin
+               q <= q;
+               qb <=qb;
+            end   
+        
+else
+ //Write logic for JK flipflop using if else statement for four conditions
+
+
+begin
+               if (j == 0 && k == 0)
+                    begin
+                    q <= q;
+                    qb <= qb;
+                    end 
+		else if (j != k)
+                    begin
+                    q <= j;
+                    qb <= k;
+                    end
+               else if (j == 1 && k == 1) 
+                    begin 
+                    q <= ~q; 
+                    qb <= ~qb; 
+                    end 
+            end
+end  
+endmodule
+
+
+```
 
 **RTL LOGIC FOR FLIPFLOPS**
+![326997616-60c709bd-29c0-42d7-8723-b4927939938a](https://github.com/Charanteja-01/JKFLIPFLOP-USING-IF-ELSE/assets/145693038/f6311d2c-d9e0-4b2d-86d7-35228803fd38)
+
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
 
+![326997541-a6697365-537b-4d73-b7c1-9b4b0ea34f2d](https://github.com/Charanteja-01/JKFLIPFLOP-USING-IF-ELSE/assets/145693038/c246e808-28ef-4a54-803a-d225123c390e)
+
+
 **RESULTS**
+Thus,Implementation of JK flipflop using verilog and validating their functionality using their functional tables is executed and the output is verified successfully.
