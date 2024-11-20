@@ -33,6 +33,7 @@ By using three variable K-Map, we can get the simplified expression for next sta
 The maximum possible groupings of adjacent ones are already shown in the figure. Therefore, the simplified expression for next state Qt+1t+1 is Q(t+1)=JQ(t)′+K′Q(t)Q(t+1)=JQ(t)′+K′Q(t)
 
 **Procedure**
+
 1.Go to quartus software.
 
 2.Set new environment.
@@ -44,6 +45,8 @@ The maximum possible groupings of adjacent ones are already shown in the figure.
 5.Give inputs in the waveform table.
 
 6.Run the program.
+
+
 
 
 
